@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-games/static/css/main.e0a118ce.css",
+    "main.js": "/react-games/static/js/main.71893c00.js",
+    "static/media/fennec.jpg": "/react-games/static/media/fennec.f6038c7185f80e3b1edc.jpg",
+    "static/media/dog.jpg": "/react-games/static/media/dog.2ec2dd96199e86bcaaa0.jpg",
+    "static/media/hamster.jpg": "/react-games/static/media/hamster.9835c886e120c766eb1d.jpg",
+    "static/media/not-found.jpg": "/react-games/static/media/not-found.3c89d938498cf02b4415.jpg",
+    "static/media/duck.jpg": "/react-games/static/media/duck.e4e10121c59727c37153.jpg",
+    "static/media/capybara.jpg": "/react-games/static/media/capybara.7a2f13b4ff0d61fae3c0.jpg",
+    "static/media/cat.jpg": "/react-games/static/media/cat.b281dd3cb5842113d52e.jpg",
+    "static/media/raccoon.jpg": "/react-games/static/media/raccoon.33877063c319190e1ec6.jpg",
+    "static/media/bunny.jpg": "/react-games/static/media/bunny.eb21d0cd7b0c2d777b01.jpg",
+    "static/media/background.jpg": "/react-games/static/media/background.afe80996fea65a7f2796.jpg",
+    "index.html": "/react-games/index.html",
+    "main.e0a118ce.css.map": "/react-games/static/css/main.e0a118ce.css.map",
+    "main.71893c00.js.map": "/react-games/static/js/main.71893c00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0a118ce.css",
+    "static/js/main.71893c00.js"
+  ]
+}
