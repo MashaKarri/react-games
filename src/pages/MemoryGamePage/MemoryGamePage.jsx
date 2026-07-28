@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { BsPatchQuestion } from "react-icons/bs";
@@ -46,6 +47,8 @@ const shuffleCards = () => {
 };
 
 function MemoryGamePage() {
+  const navigate = useNavigate();
+
   const [cards, setCards] = useState(shuffleCards());
   const [selected, setSelected] = useState([]);
   const [moves, setMoves] = useState(0);
@@ -107,7 +110,7 @@ function MemoryGamePage() {
 
   return (
     <Container>
-      <BackLink to="/games">
+      <BackLink onClick={() => navigate(-1)}>
         <IoIosArrowRoundBack />
         Games
       </BackLink>

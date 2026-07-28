@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
 import { FaRegCircle } from "react-icons/fa6";
@@ -14,6 +15,8 @@ import {
 } from "./TicTacToePage.styled.js";
 
 function TicTacToePage() {
+  const navigate = useNavigate();
+
   const [board, setBoard] = useState(Array(9).fill(""));
 
   const winner = calculateWinner(board);
@@ -50,7 +53,7 @@ function TicTacToePage() {
 
   return (
     <Container>
-      <BackLink to="/games">
+      <BackLink onClick={() => navigate(-1)}>
         <IoIosArrowRoundBack />
         Games
       </BackLink>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoSparklesOutline } from "react-icons/io5";
 import { PiSnowflakeThin } from "react-icons/pi";
@@ -16,6 +17,8 @@ import {
 } from "./GuessNumberPage.styled.js";
 
 function GuessNumberPage() {
+  const navigate = useNavigate();
+
   const [randomNumber, setRandomNumber] = useState(
     Math.floor(Math.random() * 100) + 1,
   );
@@ -62,7 +65,7 @@ function GuessNumberPage() {
 
   return (
     <Container>
-      <BackLink to="/games">
+      <BackLink onClick={() => navigate(-1)}>
         <IoIosArrowRoundBack />
         Games
       </BackLink>

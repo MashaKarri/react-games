@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import {
   FaRegHandRock,
@@ -33,6 +34,8 @@ const options = [
 ];
 
 function RockPaperScissorsPage() {
+  const navigate = useNavigate();
+
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [result, setResult] = useState("");
@@ -84,7 +87,7 @@ function RockPaperScissorsPage() {
 
   return (
     <Container>
-      <BackLink to="/games">
+      <BackLink onClick={() => navigate(-1)}>
         <IoIosArrowRoundBack />
         Games
       </BackLink>

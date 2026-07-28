@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import words from "../../data/words";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
@@ -30,6 +31,8 @@ import {
 const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 function HangmanPage() {
+  const navigate = useNavigate();
+
   const [word, setWord] = useState("");
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
@@ -70,7 +73,7 @@ function HangmanPage() {
 
   return (
     <Container>
-      <BackLink to="/games">
+      <BackLink onClick={() => navigate(-1)}>
         <IoIosArrowRoundBack />
         Games
       </BackLink>

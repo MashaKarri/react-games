@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
 import {
@@ -15,6 +16,8 @@ import {
 const colors = ["green", "red", "yellow", "blue"];
 
 function SimonSaysPage() {
+  const navigate = useNavigate();
+
   const [sequence, setSequence] = useState([]);
   const [playerSequence, setPlayerSequence] = useState([]);
   const [activeColor, setActiveColor] = useState(null);
@@ -100,7 +103,7 @@ function SimonSaysPage() {
 
   return (
     <Container>
-      <BackLink to="/games">
+      <BackLink onClick={() => navigate(-1)}>
         <IoIosArrowRoundBack />
         Games
       </BackLink>
