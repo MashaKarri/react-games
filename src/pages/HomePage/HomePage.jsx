@@ -8,7 +8,9 @@ import {
   Button,
 } from "./HomePage.styled.js";
 
-function HomePage() {
+import AccessMessage from "../../components/AccessMessage/AccessMessage.jsx";
+
+function HomePage({ user, onLogin }) {
   return (
     <Container>
       <Title>Mini Games</Title>
@@ -18,18 +20,24 @@ function HomePage() {
         Router
       </Text>
 
-      <Subtitle>Games Included</Subtitle>
+      {user ? (
+        <>
+          <Subtitle>Games Included</Subtitle>
 
-      <List>
-        <Item>Guess Number</Item>
-        <Item>Tic Tac Toe</Item>
-        <Item>Memory Game</Item>
-        <Item>Rock Paper Scissors</Item>
-        <Item>Hangman</Item>
-        <Item>Simon Says</Item>
-      </List>
+          <List>
+            <Item>Guess Number</Item>
+            <Item>Tic Tac Toe</Item>
+            <Item>Memory Game</Item>
+            <Item>Rock Paper Scissors</Item>
+            <Item>Hangman</Item>
+            <Item>Simon Says</Item>
+          </List>
 
-      <Button to="/games">Go to Games</Button>
+          <Button to="/games">Go to Games</Button>
+        </>
+      ) : (
+        <AccessMessage onLogin={onLogin} />
+      )}
     </Container>
   );
 }
